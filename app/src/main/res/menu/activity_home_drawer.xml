@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+        <item
+            android:id="@+id/novel"
+
+            android:title="Novel Writing" />
+
+        <item
+            android:id="@+id/music"
+
+            android:title="Music" />
+        <item
+            android:id="@+id/stand_up"
+
+            android:title="Stand-Up Comedy" />
+        <item
+            android:id="@+id/design"
+
+            android:title="Design" />
+        <item
+            android:id="@+id/radio_joc"
+
+            android:title="Radio Jockey" />
+        <item
+            android:id="@+id/fashion_blog"
+
+            android:title="Fashion Blogging" />
+        <item
+            android:id="@+id/food_blog"
+
+            android:title="Food Blogging" />
+        <item
+            android:id="@+id/entrepren"
+
+            android:title="Entrepreneur" />
+        <item
+            android:id="@+id/emceeing"
+
+            android:title="Emceeing" />
+        <item
+            android:id="@+id/beat_box"
+
+            android:title="Beat Boxing" />
+        <item
+            android:id="@+id/artist_man"
+
+            android:title="Artist Management" />
+        <item
+            android:id="@+id/baking"
+
+            android:title="Baking" />
+        <item
+            android:id="@+id/film_prod"
+
+            android:title="Film Production" />
+        <item
+            android:id="@+id/chef"
+
+            android:title="Chef" />
+
+        <item
+            android:id="@+id/web_series"
+
+            android:title="Web Series" />
+
+
+            <item
+                android:id="@+id/nav_share"
+
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+
+                android:title="Logout" />
+
+
+</menu>
