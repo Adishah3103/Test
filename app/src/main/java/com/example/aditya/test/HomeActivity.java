@@ -24,6 +24,10 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,6 +50,9 @@ public class HomeActivity extends BaseActivity
     Context mContext = this;
     private TextView mFullNameTextView;
     private CircleImageView mProfileImageView;
+    private ListView lv;
+    String [] values = {"Novel Writing","Music", "Stand-Up Comedy", "Design", "Radio Jockey", "Fashion Blogging", "Food Blogging" , "Entrepreneur",
+            "Emceeing", "Beat Boxing","Artist Management","Baking","Film Production","Chef", "Web Series"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +61,9 @@ public class HomeActivity extends BaseActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(" ");
-
+        lv=(ListView)findViewById(R.id.menu_items);
+        ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this, R.layout.list_view_model,R.id.genre,values);
+        lv.setAdapter(arrayAdapter);
 
 
 
@@ -68,13 +77,16 @@ public class HomeActivity extends BaseActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.nav_layout);
 
-        mFullNameTextView = (TextView)navigationView.getHeaderView(0).findViewById(R.id.name);
-        mProfileImageView = (CircleImageView) navigationView.getHeaderView(0).findViewById(R.id.profile_image);
+        try {
+
+        mFullNameTextView = (TextView)relativeLayout.findViewById(R.id.name);
+        mProfileImageView = (CircleImageView)relativeLayout.findViewById(R.id.profile_image);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user=mAuth.getCurrentUser();
         mFullNameTextView.setText(user.getDisplayName());
-        try {
+
 
 
             Glide.with(this)
