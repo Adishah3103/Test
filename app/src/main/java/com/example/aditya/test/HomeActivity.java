@@ -25,6 +25,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -78,6 +79,7 @@ public class HomeActivity extends BaseActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.nav_layout);
+        Button settings =(Button)relativeLayout.findViewById(R.id.settings);
 
         try {
 
@@ -101,6 +103,17 @@ public class HomeActivity extends BaseActivity
 
 
         configureSignIn();
+
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),SettingsActivity.class);
+                startActivity(i);
+
+            }
+        });
+
     }
 
 

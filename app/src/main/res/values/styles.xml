@@ -6,6 +6,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyTheme" >
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#004D40</item>
+        <item name="colorPrimaryDark">#004D40</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
